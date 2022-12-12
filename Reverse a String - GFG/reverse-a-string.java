@@ -31,28 +31,6 @@ class Reverse
     // str: input string
     public static String reverseWord(String str)
     {
-        //if str is empty
-        if(str==null || str.equals("")){
-            return str;
-        }
-        
-        // Reverse the string str
-        char[] c= str.toCharArray();
-        
-        int n= c.length;
-        int start=0;
-        int end=n-1;
-        
-        //swapping the first and last element
-        while(start<end){
-            char temp=c[start];
-            c[start]=c[end];
-            c[end]=temp;
-            start++;
-            end--;
-        }
-        
-        //converting array into string and returning it
-        return String.copyValueOf(c);
+        return new StringBuilder(str).reverse().toString();
     }
 }
